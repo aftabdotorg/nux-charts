@@ -20,17 +20,17 @@ repos.forEach((repo) => {
     });
 });
 
-const chartData = computed((): ChartData<"doughnut"> => {
+const chartData = computed((): ChartData<"pie"> => {
     return {
         labels: repos,
         datasets: [
             {
                 backgroundColor: [
-                  "#41B883",
-                  "#149eca",
-                  "#c30e2e",
-                  "#f96743",
-                  "#043271",
+                    "#41B883",
+                    "#149eca",
+                    "#c30e2e",
+                    "#f96743",
+                    "#043271",
                 ],
                 label: "Stars",
                 data: repoData.value.map((repo) => repo.stargazers_count),
@@ -41,7 +41,9 @@ const chartData = computed((): ChartData<"doughnut"> => {
 </script>
 <template>
     <div style="display: flex; justify-content: center">
-        <Doughnut v-if="repoData.length === repos.length" :data="chartData" />
+        <Pie v-if="repoData.length === repos.length" :data="chartData" :options="{
+            cutout: '20%'
+        }" />
     </div>
 </template>
 <style>
