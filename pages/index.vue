@@ -51,7 +51,9 @@ const chartData = computed((): ChartData<"bar"> => {
 
 </script>
 <template>
-    <Bar v-if="movies.length" :data="chartData" />
+    <Bar v-if="movies.length" :data="chartData" :options="{
+        indexAxis: 'y'
+    }" />
 </template>
 
 <style>
