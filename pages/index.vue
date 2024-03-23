@@ -35,14 +35,13 @@ const chartData = computed((): ChartData<"bar"> => {
             {
                 label: "IMDb",
                 backgroundColor: ["#c82834"],
-                borderColor: "yellow",
-                borderWidth: 3,
-                borderRadius: {topLeft: 10},
+                stack: "rating",
                 data: movies.value.map(movie => movie.rating),
             },
             {
                 label: "Rotten Tomatoes",
                 backgroundColor: ["#244771"],
+                stack: "rating",
                 data: movies.value.map(movie => movie.rating + 1),
             }
         ]
