@@ -7,7 +7,8 @@ import {
   CategoryScale,
   LinearScale,
   PointElement,
-  LineElement
+  LineElement,
+  ArcElement,
 } from "chart.js";
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -19,6 +20,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     CategoryScale,
     LinearScale,
     PointElement,
-    LineElement
+    LineElement,
+    ArcElement
   );
 });
