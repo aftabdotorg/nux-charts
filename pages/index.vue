@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Bar } from "vue-chartjs";
-import type { ChartData, plugins } from "chart.js"
+import type { ChartData } from "chart.js"
 import { computed, ref } from "vue";
 
 
