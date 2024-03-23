@@ -1,25 +1,8 @@
 <script setup lang="ts">
 import { Bar } from "vue-chartjs";
 import type { ChartData, plugins } from "chart.js"
-import {
-    Chart as ChartJS,
-    Title,
-    Tooltip,
-    Legend,
-    BarElement,
-    CategoryScale,
-    LinearScale,
-} from "chart.js";
 import { computed, ref } from "vue";
 
-ChartJS.register(
-    Title,
-    Tooltip,
-    Legend,
-    BarElement,
-    CategoryScale,
-    LinearScale
-);
 
 type movie = { title: string, rating: number }
 const movies = ref<movie[]>([])
