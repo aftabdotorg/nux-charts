@@ -42,7 +42,8 @@ const chartData = computed((): ChartData<"pie"> => {
 <template>
     <div style="display: flex; justify-content: center">
         <Pie v-if="repoData.length === repos.length" :data="chartData" :options="{
-            cutout: '20%'
+            cutout: '20%',
+            maintainAspectRatio: false
         }" />
     </div>
 </template>
